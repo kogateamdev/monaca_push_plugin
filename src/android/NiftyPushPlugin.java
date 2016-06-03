@@ -23,6 +23,7 @@ import org.json.JSONObject;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
+import android.os.AsyncTask;
 
 /**
  * Nifty push notification plugin.
