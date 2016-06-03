@@ -152,6 +152,33 @@ public class NiftyPushPlugin extends CordovaPlugin
         }
 
         NCMBPush.richPushHandler(cordova.getActivity(), dummyIntent);
+
+        showNotificationDialog();
+    }
+
+
+    //Binh
+    public void showNotificationDialog() {
+        new AsyncTask<Void, Void, Void>() {
+            @Override
+            protected Void doInBackground(Void... params) {
+                //非同期処理
+                //標準的なダイアログを表示するタイプ
+                MyCustomService.dialogPushConfiguration.setDisplayType(NCMBDialogPushConfiguration.DIALOG_DISPLAY_DIALOG);
+
+                NCMBPush push = new NCMBPush();
+                push.setTitle("Notification Dialog");
+                push.setMessage("Show dialog for testing");
+                push.setDialog(true);
+                try {
+                    push.send();
+                } catch (NCMBException e) {
+                    error = e;
+                }
+                TestCompletion = true;
+                return null;
+            }
+        }.execute();
     }
 
     /**
