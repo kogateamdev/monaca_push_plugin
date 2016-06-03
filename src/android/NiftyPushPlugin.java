@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
 import android.os.AsyncTask;
-import plugin.push.nifty.MyCustomService;
+
 
 /**
  * Nifty push notification plugin.
@@ -176,7 +176,7 @@ public class NiftyPushPlugin extends CordovaPlugin
                 try {
                     push.send();
                 } catch (NCMBException e) {
-                    error = e;
+                    NCMBException error = e;
                 }
 
                 return null;
