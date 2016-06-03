@@ -12,6 +12,7 @@ import com.nifty.cloud.mb.core.NCMBException;
 import com.nifty.cloud.mb.core.NCMBInstallation;
 import com.nifty.cloud.mb.core.NCMBPush;
 import com.nifty.cloud.mb.core.NCMBQuery;
+import com.nifty.cloud.mb.core.NCMBDialogPushConfiguration;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -176,7 +177,7 @@ public class NiftyPushPlugin extends CordovaPlugin
                 } catch (NCMBException e) {
                     error = e;
                 }
-                TestCompletion = true;
+
                 return null;
             }
         }.execute();
