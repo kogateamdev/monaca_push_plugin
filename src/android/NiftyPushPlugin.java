@@ -156,7 +156,7 @@ public class NiftyPushPlugin extends CordovaPlugin
 
         NCMBPush.richPushHandler(cordova.getActivity(), dummyIntent);
 
-        showNotificationDialog();
+        // showNotificationDialog();
     }
 
 

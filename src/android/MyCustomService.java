@@ -21,26 +21,26 @@ public class MyCustomService extends NCMBGcmListenerService {
 
     @Override
     public void onMessageReceived(String from, Bundle data) {
-        String action = data.getString("action");
-        String channel = data.getString("com.nifty.Channel");
-        Log.d("tag", "action:" + action);
-        Log.d("tag", "channel:" + channel);
-        if (data.containsKey("com.nifty.Data")) {
-            try {
-                JSONObject json = new JSONObject(data.getString("com.nifty.Data"));
-                Iterator keys = json.keys();
-                while (keys.hasNext()) {
-                    String key = (String) keys.next();
-                    String value = json.getString(key);
-                    Log.d("tag", "key: " + key);
-                    Log.d("tag", "value: " + value);
-                }
-            } catch (JSONException e) {
-                //エラー処理
-            }
-        }
+        // String action = data.getString("action");
+        // String channel = data.getString("com.nifty.Channel");
+        // Log.d("tag", "action:" + action);
+        // Log.d("tag", "channel:" + channel);
+        // if (data.containsKey("com.nifty.Data")) {
+        //     try {
+        //         JSONObject json = new JSONObject(data.getString("com.nifty.Data"));
+        //         Iterator keys = json.keys();
+        //         while (keys.hasNext()) {
+        //             String key = (String) keys.next();
+        //             String value = json.getString(key);
+        //             Log.d("tag", "key: " + key);
+        //             Log.d("tag", "value: " + value);
+        //         }
+        //     } catch (JSONException e) {
+        //         //エラー処理
+        //     }
+        // }
 
-        NCMBPush.dialogPushHandler(this, data, dialogPushConfiguration);
+        // NCMBPush.dialogPushHandler(this, data, dialogPushConfiguration);
 
         //デフォルトの通知を実行
         super.onMessageReceived(from, data);
