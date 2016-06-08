@@ -13,6 +13,7 @@ import com.nifty.cloud.mb.core.NCMBInstallation;
 import com.nifty.cloud.mb.core.NCMBPush;
 import com.nifty.cloud.mb.core.NCMBQuery;
 import com.nifty.cloud.mb.core.NCMBDialogPushConfiguration;
+import com.nifty.cloud.mb.core.NCMBGcmListenerService;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -167,7 +168,8 @@ public class NiftyPushPlugin extends CordovaPlugin
             protected Void doInBackground(Void... params) {
                 //非同期処理
                 //標準的なダイアログを表示するタイプ
-                MyCustomService.dialogPushConfiguration.setDisplayType(NCMBDialogPushConfiguration.DIALOG_DISPLAY_DIALOG);
+                // MyCustomService.dialogPushConfiguration.setDisplayType(NCMBDialogPushConfiguration.DIALOG_DISPLAY_DIALOG);
+                NCMBGcmListenerService.dialogPushConfiguration.setDisplayType(NCMBDialogPushConfiguration.DIALOG_DISPLAY_DIALOG);
 
                 // NCMBPush push = new NCMBPush();
                 // push.setTitle("Notification Dialog");
