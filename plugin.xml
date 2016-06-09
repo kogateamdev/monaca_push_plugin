@@ -65,7 +65,6 @@
         <framework src="com.google.android.gms:play-services-gcm:8.1.0" />
         <framework src="com.google.code.gson:gson:2.4" />
         <lib-file src="src/android/libs/NCMB.jar" />
-        <source-file src="src/android/MyCustomService.java" target-dir="src/plugin/push/nifty/" />
         <source-file src="src/android/NiftyData.java" target-dir="src/plugin/push/nifty/" />
         <source-file src="src/android/NiftyPushPlugin.java" target-dir="src/plugin/push/nifty/" />
     </platform>
