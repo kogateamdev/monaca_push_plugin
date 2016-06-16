@@ -11,8 +11,8 @@
     id="plugin.push.nifty"
     version="2.0.1">
 
-    <name>NiftyMB</name>
-    <description>NiftyMB Cloud for Push Notification Plugin</description>
+    <name>NiftyMB_MODIFY</name>
+    <description>NiftyMB Cloud for Push Notification Plugin, modified to show contents on Notification Area and dialog</description>
     <license>Copyright 2014 NIFTY Corporation. All Rights Reserved.</license>
     
     <engines>
