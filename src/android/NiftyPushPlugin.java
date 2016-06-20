@@ -12,8 +12,6 @@ import com.nifty.cloud.mb.core.NCMBException;
 import com.nifty.cloud.mb.core.NCMBInstallation;
 import com.nifty.cloud.mb.core.NCMBPush;
 import com.nifty.cloud.mb.core.NCMBQuery;
-import com.nifty.cloud.mb.core.NCMBDialogPushConfiguration;
-import com.nifty.cloud.mb.core.NCMBGcmListenerService;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -25,8 +23,6 @@ import org.json.JSONObject;
 import java.util.List;
 import java.util.Queue;
 import java.util.concurrent.LinkedBlockingQueue;
-import android.os.AsyncTask;
-
 
 /**
  * Nifty push notification plugin.
